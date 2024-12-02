@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Alison Porter">
-        <title>Alison Porter Portfolio</title>
+        <title>Alison Porter</title>
         <meta name="robots" content="index,follow">
         <!-- ~~~~~~~~~~ linked files ~~~~~~~~~~ -->
         <link href="stylesheet.css" rel="stylesheet">
@@ -15,12 +15,21 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Major+Mono+Display&family=Rubik+Dirt&display=swap" rel="stylesheet">
             <!-- ~~~~~~~~~~ favicon ~~~~~~~~~~ -->
-        <link rel="icon" href="images/favicon-16x16.png">
+        <link rel="icon" href="images/favicon.ico">
 
         </head>
         <body>
             <a id="skip" href="#main-content">Skip to Main Content</a>
+            <div id="lightdarkmode">
+                <div hide>
+                    <img src="images/sun.svg" alt="light mode icon">
+                </div>
+                <div>
+                    <img src="images/moon.svg" alt="dark mode icon">
+                </div>
+            </div>
             <header>
+                
                 <h1>Alison Porter</h1>
                 <h2>Web developer and Graphic Designer</h2>
                 <nav>
@@ -34,6 +43,33 @@
             </header>
             <main id="main-content">
 
+                <!--form-->
+                <form id="contact">
+                    <label for="firstname">First Name<span class="required">*</span></label>
+                    <input type="text" name="firstname" id="firstname" required>
+
+                    <label for="lastname">Last Name<span class="required">*</span></label>
+                    <input type="text" name="lastname" id="lastname" required>
+
+                    <label for="tel">Phone Number<span class="required">*</span></label>
+                    <input type="tel" name="tel" id="tel" required autocomplete="tel">
+
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" name="email" id="email" required autocomplete="email">
+
+                    <label for="message">Comments<span class="required">*</span></label>
+                    <textarea name="message" id="message" required></textarea>
+
+                    <fieldset>
+                        <legend>Preferred Method of Contact<span class="required">*</span></legend>
+                        <input id="radio" name="radio" type="radio" value="phone" required >
+                        <label for="radio">Phone</label>
+                        <input id="radio2" name="radio" type="radio" value="email">
+                        <label for="radio2">Email</label>
+                    </fieldset>
+                    <input type="submit" value="Submit">
+
+                </form>
             </main>
             <footer>
                 <p><small>Copyright 2024 ADPDesign</small></p>
