@@ -50,27 +50,66 @@ table {
     --white: #fff;
     --darkgrey: #252626;
     --grey: #5b5c5c;
-    --fonts: "Major Mono Display", serif;
+    --fonts: "Ubuntu", sans-serif;;
 
 
 }
 /* font 
 .rubik-dirt-regular {
-    font-family: "Rubik Dirt", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.dm-sans-<uniquifier> {
-  font-family: "DM Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
-  .major-mono-display-regular {
-  font-family: "Major Mono Display", serif;
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+  .limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 
 */
 /* skip link styles */
@@ -92,27 +131,35 @@ body {
     width: 1280px;
     box-sizing: border-box;
 	line-height: 1.35;
-    color: var(--darkgrey);
+    background-image: url("images/background.jpeg");
+    font-family: var(--fonts);
     
 }
 /* ----- HEADER STYLES ----- */
 header{
 	padding: 1rem;
-	border-bottom: 0.25rem solid var(--turquoise);
+	border-bottom: 0.25rem solid var(--darkgrey);
+    
+    
 }
 /* header and text styles */
 h1 {
-    font-family: "Major Mono Display", serif;
+    font-family: "Limelight", sans-serif;
     font-style: normal;
     font-size: 2.5rem;
-    color: var(--turquoise);
     font-weight: bold;
 	text-align: center;
 	margin: 1rem 0;
 }
+#headerimage {
+    background-image: url("images/headplaque.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%, 100%, auto;
+}
 
 h2 {
-    font-family: "Rubik Dirt", serif;
+    font-family: "Limelight", sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
     font-style: normal;
@@ -121,12 +168,18 @@ h2 {
     color: var(--turquoise);
 }
 h3, p, li, label {
-    font-family: "DM Sans", serif;
+    
     font-optical-sizing: auto;
     font-style: normal; 
+    font-size: 1rem;
+    margin: 1rem 0;
 }
 a {
    text-decoration: none;
+}
+/* ----main styles----- */
+main {
+    margin: auto;
 }
 /* ----- NAV LINK STYLES ----- */
 nav a{
@@ -134,13 +187,8 @@ nav a{
 	padding: 1rem;
 	text-decoration: none;
 	text-align: center;
-	background-color: var(--turquoise);
 	color: white;
 	font-weight: bold;
-	margin: 0.5rem auto;
-	border-radius: 0.5rem;
-	width: calc(100% - 2rem);
-	max-width: 350px;
 }
 nav ul {
 	list-style:none;
