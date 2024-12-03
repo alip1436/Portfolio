@@ -134,38 +134,44 @@ body {
   box-sizing: border-box;
 	line-height: 1.35;
   font-family: var(--fonts);
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: var(--white);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 nav a {
-  color: var(--white); /* Light mode link color */
+  color: var(--turquoise); /* dark mode link color */
   transition: color 0.3s ease;
 }
 
 h2 {
-  color: var(--darkgrey); /* Light mode heading color */
+  color: var(--darkgrey); 
   transition: color 0.3s ease;
 }
-/* Dark Mode */
+
+/* light Mode */
 body.dark-mode {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+}
+body.dark-mode #about {
+  background-color: rgba(254, 253, 253, 0.703); 
+  background-blend-mode: overlay;
+
 }
 body.dark-mode nav a {
-  color: black; /* Dark mode link color */
+  color: black; /* light mode link color */
 }
 
-body.dark-mode h2 {
-  color: var(--darkgrey); /* Dark mode heading color */
-}
 body.dark-mode header{
-  background-color: rgba(9, 9, 9, 0.447); /* Semi-transparent overlay */
+  background-color: rgba(254, 253, 253, 0.447); /* Semi-transparent overlay */
   background-blend-mode: overlay;
 }
 body.dark-mode main {
-  background-color: transparent; /* Semi-transparent overlay */
+  background-color: rgba(254, 253, 253, 0.464); /* Semi-transparent overlay */
   background-blend-mode: overlay;
+}
+body.dark-mode footer svg{
+  stroke: black;
 }
 /* Icon Toggle */
 #themeToggle {
@@ -192,7 +198,7 @@ header{
     grid-template-columns: auto 1fr;
 	  padding: 1rem;
 	  border-bottom: 0.25rem solid var(--turquoise);
-    background-color: rgba(254, 253, 253, 0.447); /* Semi-transparent overlay */
+    background-color: rgba(9, 9, 9, 0.447); /* Semi-transparent overlay */
     background-blend-mode: overlay;
     background-image: url("images/background2.jpeg");
     
@@ -275,11 +281,13 @@ nav ul {
 main {
   margin: auto;
   background-image: url("images/background.jpeg");
-  background-color: rgba(254, 253, 253, 0.346); /* Semi-transparent overlay */
-  background-blend-mode: overlay;
-  
+  padding-top: 50px;
+  padding-left: 25px;
 }
-
+#about {
+  padding: 5px;
+  margin: 10px;
+}
 /* form */
 form {
 	display: block;
