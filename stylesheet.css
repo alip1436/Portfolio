@@ -223,17 +223,7 @@ h1 {
     position: relative;
     text-align: center;
     color: var(--turquoise);
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("images/headplaque.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%, 90%, cover;
-    max-width: 1200px; */
 }
-
-
 
 h2 {
     font-family: "Limelight", sans-serif;
@@ -350,7 +340,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-	border-color: rgb(0, 123, 255);
+	border-color: var(--turquoise);
 	box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.3);
 	border-radius: 4px;
 }
@@ -359,7 +349,25 @@ input:error,
 textarea:error {
 	border-color: #f0071f;
 }
-/*guessing game */
+.message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none; /* Hidden by default */
+}
+
+#successfulSubmit {
+  background-color: #f9faf9;
+  color: var(--darkgrey);
+  padding: 10px;
+  border: 1px solid var(--turquoise);
+  margin-top: 20px;
+  margin-left: 350px;
+  text-align: center;
+  width: fit-content;
+}
+
+/*----- GUESSING GAME ----- */
 #yourguess, #random{
   display: inline-block;
 	font-size: 1.5rem;
@@ -388,18 +396,22 @@ footer p{
   text-align: center;
 
 }
-footer a {
-  display: block;
+footer ul{
+  display: flex;
   align-items: center;
   justify-content: center;
   
-  
-  
- 
+}
+footer a{
+  padding: 20px;
 }
 
 /* ----- HOVER STYLES ----- */
-nav a:hover, footer a:hover{
-    
-    color: var(--turquoise);
+nav a:hover, body.dark-mode nav a:hover{
+    color: white;
+
+}
+
+footer a svg:hover {
+  stroke: var(--turquoise)
 }

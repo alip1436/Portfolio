@@ -74,33 +74,44 @@
                      <p id="guessMsg"></p>
                 </form>
 
-                <!--form-->
-                <form id="contact" action="test.php" method="post">
+                <!--CONTACT form-->
+                <form id="contact" action="" method="post">
                     <label for="firstname">First Name<span class="required">*</span></label>
                     <input type="text" name="firstname" id="firstname" required>
-
+                    <span class="message" id="error-firstname"></span>
+                
                     <label for="lastname">Last Name<span class="required">*</span></label>
                     <input type="text" name="lastname" id="lastname" required>
-
+                    <span class="message" id="error-lastname"></span>
+                
                     <label for="tel">Phone Number<span class="required">*</span></label>
-                    <input type="tel" name="tel" id="tel" required autocomplete="tel">
-
+                    <input type="tel" name="tel" id="tel" autocomplete="tel">
+                    <span class="message" id="error-tel"></span>
+                
                     <label for="email">Email<span class="required">*</span></label>
-                    <input type="email" name="email" id="email" required autocomplete="email">
-
-                    <label for="message">Comments<span class="required">*</span></label>
-                    <textarea name="message" id="message" required></textarea>
-
+                    <input type="email" name="email" id="email" autocomplete="email">
+                    <span class="message" id="error-email"></span>
+                
+                    <label for="comments">Comments<span class="required">*</span></label>
+                    <textarea name="comments" id="comments" required></textarea>
+                    <span class="message" id="error-comments"></span>
+                
                     <fieldset>
                         <legend>Preferred Method of Contact<span class="required">*</span></legend>
-                        <input id="radio" name="radio" type="radio" value="phone" required >
+                        <input id="radio" name="radio" type="radio" value="phone" required>
                         <label for="radio">Phone</label>
                         <input id="radio2" name="radio" type="radio" value="email">
                         <label for="radio2">Email</label>
+                        <span class="message" id="error-radio"></span>
                     </fieldset>
                     <input type="submit" value="Submit">
-
                 </form>
+                <section id="successfulSubmit" style="display: none;">
+                    <h4>Thank You!</h4>
+                    <p>Your form has been submitted successfully! I will be in touch shortly.</p>
+                    <p id="formSub"></p>
+                </section>
+                
             </main>
             <footer>
                 <ul>

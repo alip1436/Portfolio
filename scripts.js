@@ -61,3 +61,86 @@ function guessingGame(event) {
 
 // Add event listener for the game button
 document.getElementById("gamePlay").addEventListener("click", guessingGame);
+
+//form validation
+document.getElementById("contact").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Collect inputs
+    const firstname = document.getElementById("firstname").value.trim();
+    const lastname = document.getElementById("lastname").value.trim();
+    const tel = document.getElementById("tel").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const comments = document.getElementById("comments").value.trim();
+    const preferredContact = document.querySelector('input[name="radio"]:checked');
+
+    // Regex for validation
+    const phoneRegex = /^[0-9]{10}$/; // Simple regex for a 10-digit phone number
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex for valid email format
+
+    // Error tracking
+    let isValid = true;
+
+    // Clear previous errors
+    document.querySelectorAll(".message").forEach((msg) => (msg.style.display = "none"));
+
+    // Validate fields
+    if (!firstname) {
+        document.getElementById("error-firstname").textContent = "First name is required.";
+        document.getElementById("error-firstname").style.display = "block";
+        isValid = false;
+    }
+
+    if (!lastname) {
+        document.getElementById("error-lastname").textContent = "Last name is required.";
+        document.getElementById("error-lastname").style.display = "block";
+        isValid = false;
+    }
+
+    if (preferredContact && preferredContact.value === "phone" && !phoneRegex.test(tel)) {
+        document.getElementById("error-tel").textContent = "Please enter a valid 10-digit phone number.";
+        document.getElementById("error-tel").style.display = "block";
+        isValid = false;
+    }
+
+    if (preferredContact && preferredContact.value === "email" && !emailRegex.test(email)) {
+        document.getElementById("error-email").textContent = "Please enter a valid email address.";
+        document.getElementById("error-email").style.display = "block";
+        isValid = false;
+    }
+
+    if (!comments) {
+        document.getElementById("error-comments").textContent = "Comments are required.";
+        document.getElementById("error-comments").style.display = "block";
+        isValid = false;
+    }
+
+    if (!preferredContact) {
+        document.getElementById("error-radio").textContent = "Please select your preferred method of contact.";
+        document.getElementById("error-radio").style.display = "block";
+        isValid = false;
+    }
+
+    // If form is valid
+    if (isValid) {
+        // Create customer object
+        const customer = {
+            firstname,
+            lastname,
+            phone: tel,
+            email,
+            comments,
+            preferredContact: preferredContact.value,
+        };
+
+        // Show success message
+        document.getElementById("contact").reset();
+        document.getElementById("successfulSubmit").style.display = "block";
+        document.getElementById("formSub").innerHTML = `
+            Name: ${customer.firstname} ${customer.lastname}<br>
+            Preferred Contact: ${customer.preferredContact}<br>
+            ${customer.preferredContact === "phone" ? `Phone: ${customer.phone}` : `Email: ${customer.email}`}<br>
+            Comments: ${customer.comments}
+        `;
+    }
+});
