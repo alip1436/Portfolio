@@ -130,17 +130,19 @@ table {
 body {
     width: 1280px;
     box-sizing: border-box;
-	line-height: 1.35;
-    background-image: url("images/background.jpeg");
+	  line-height: 1.35;
+    background-color: #4d2502;
     font-family: var(--fonts);
     
 }
 /* ----- HEADER STYLES ----- */
 header{
-	padding: 1rem;
-	border-bottom: 0.25rem solid var(--darkgrey);
-    
-    
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+	  padding: 1rem;
+	  border-bottom: 0.25rem solid var(--turquoise);
+    background-image: url("images/background2.jpeg");
 }
 /* header and text styles */
 h1 {
@@ -148,15 +150,31 @@ h1 {
     font-style: normal;
     font-size: 2.5rem;
     font-weight: bold;
-	text-align: center;
-	margin: 1rem 0;
+	  text-align: center;
+	  margin: 0;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
 }
 #headerimage {
+    position: relative;
+    text-align: center;
+    color: var(--turquoise);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: url("images/headplaque.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%, 100%, auto;
+    background-size: 100%, 90%, cover;
+    max-width: 1200px; */
 }
+
+
 
 h2 {
     font-family: "Limelight", sans-serif;
@@ -164,8 +182,8 @@ h2 {
     font-size: 1.5rem;
     font-style: normal;
     text-align: center;
-	margin: 1rem 0;
-    color: var(--turquoise);
+	  margin: 1rem 0;
+    color: var(--darkgrey);
 }
 h3, p, li, label {
     
@@ -177,22 +195,36 @@ h3, p, li, label {
 a {
    text-decoration: none;
 }
-/* ----main styles----- */
-main {
-    margin: auto;
-}
+
 /* ----- NAV LINK STYLES ----- */
+nav{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
 nav a{
 	display: block;
-	padding: 1rem;
+	padding: 2rem;
 	text-decoration: none;
 	text-align: center;
-	color: white;
+	color: var(--turquoise);
 	font-weight: bold;
+  background-image: url("images/metalplaque.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%, 150%, cover;
 }
 nav ul {
 	list-style:none;
 }
+/* ----main styles----- */
+main {
+  margin: auto;
+  background-image: url("images/background.jpeg");
+}
+
 /* form */
 form {
 	display: block;
@@ -268,11 +300,27 @@ textarea:error {
 footer{
 	padding: 1rem; 	
 	border-top: 0.25rem solid var(--turquoise);
+  display: flex;
+  flex-direction: column;
+  
+}
+footer p{
+  color: var(--white);
+  text-align: center;
+
+}
+footer a {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  
+  
+  
+ 
 }
 
-
 /* ----- HOVER STYLES ----- */
-nav a:hover{
+nav a:hover, footer a:hover{
     background-color: var(--white);
     color: var(--turquoise);
 }
