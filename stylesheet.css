@@ -50,6 +50,7 @@ table {
     --white: #fff;
     --darkgrey: #252626;
     --grey: #5b5c5c;
+    --dkbrown: rgb(51, 31, 6);
     --fonts: "Ubuntu", sans-serif;;
 
 
@@ -127,26 +128,74 @@ table {
 	height: auto;
 }
 /* light and dark mode */
-#lightdarkmode {
 
-}
-/* body- global */
 body {
-    width: 1280px;
-    box-sizing: border-box;
-	  line-height: 1.35;
-    background-color: #4d2502;
-    font-family: var(--fonts);
-    
+  width: 1280px;
+  box-sizing: border-box;
+	line-height: 1.35;
+  font-family: var(--fonts);
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+nav a {
+  color: var(--white); /* Light mode link color */
+  transition: color 0.3s ease;
+}
+
+h2 {
+  color: var(--darkgrey); /* Light mode heading color */
+  transition: color 0.3s ease;
+}
+/* Dark Mode */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+body.dark-mode nav a {
+  color: black; /* Dark mode link color */
+}
+
+body.dark-mode h2 {
+  color: var(--darkgrey); /* Dark mode heading color */
+}
+body.dark-mode header{
+  background-color: rgba(9, 9, 9, 0.447); /* Semi-transparent overlay */
+  background-blend-mode: overlay;
+}
+body.dark-mode main {
+  background-color: transparent; /* Semi-transparent overlay */
+  background-blend-mode: overlay;
+}
+/* Icon Toggle */
+#themeToggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+#sunIcon,
+#moonIcon {
+  transition: opacity 0.3s ease;
+}
+
+body.dark-mode #sunIcon {
+  display: none;
+}
+
+body.dark-mode #moonIcon {
+  display: block;
+}
+
 /* ----- HEADER STYLES ----- */
 header{
     display: grid;
     grid-template-columns: auto 1fr;
-
 	  padding: 1rem;
 	  border-bottom: 0.25rem solid var(--turquoise);
+    background-color: rgba(254, 253, 253, 0.447); /* Semi-transparent overlay */
+    background-blend-mode: overlay;
     background-image: url("images/background2.jpeg");
+    
 }
 /* header and text styles */
 h1 {
@@ -213,7 +262,6 @@ nav a{
 	padding: 2rem;
 	text-decoration: none;
 	text-align: center;
-	color: var(--turquoise);
 	font-weight: bold;
   background-image: url("images/metalplaque.png");
   background-position: center;
@@ -227,6 +275,9 @@ nav ul {
 main {
   margin: auto;
   background-image: url("images/background.jpeg");
+  background-color: rgba(254, 253, 253, 0.346); /* Semi-transparent overlay */
+  background-blend-mode: overlay;
+  
 }
 
 /* form */
@@ -325,7 +376,7 @@ footer{
   
 }
 footer p{
-  color: var(--white);
+  
   text-align: center;
 
 }
@@ -341,6 +392,6 @@ footer a {
 
 /* ----- HOVER STYLES ----- */
 nav a:hover, footer a:hover{
-    background-color: var(--white);
+    
     color: var(--turquoise);
 }

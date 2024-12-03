@@ -4,6 +4,24 @@
 
 //--- prevent default on forms 
 // attach the events handlers
+//light and dark mode
+document.getElementById("themeToggle").addEventListener("click", function () {
+    // Toggle the dark mode class on the body
+    document.body.classList.toggle("dark-mode");
+
+    // Handle icon visibility
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+
+    if (document.body.classList.contains("dark-mode")) {
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "block";
+    } else {
+        sunIcon.style.display = "block";
+        moonIcon.style.display = "none";
+    }
+});
+
 
 // guessing game
 function getRandomNumber(min, max) {
@@ -23,7 +41,7 @@ function guessingGame(event) {
 
     // Get the user's guess from the input field
     let yourGuessNum = parseInt(document.getElementById("yourguessIn").value, 10);
-    
+
     if (isNaN(yourGuessNum) || yourGuessNum < 1 || yourGuessNum > 10) {
         gameMessage.textContent = "⚠️ Please enter a number between 1 and 10.";
         return; // Exit the function if input is invalid
