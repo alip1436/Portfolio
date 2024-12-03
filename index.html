@@ -54,9 +54,26 @@
                 <aside id="projectdescription">
                     <p>Description final project and that this is the site created for final project</p>
                 </aside>
+
                 <section id="portfolio">
 
                 </section>
+                <!--Guessing game-->
+                <!-- Guessing Game -->
+                <form id="game">
+                    <h2>Play & Win!</h2>
+                    <p>Guess the number correctly, and you win!</p>
+                    <label for="yourguessIn">Enter a number between 1 and 10:</label>
+                    <input type="number" id="yourguessIn" min="1" max="10">
+                    <button id="gamePlay" type="button">Take a Guess!</button> <!-- Type button prevents form submission -->
+    
+                    <div>
+                        <p id="yourguess">Your Guess:</p>
+                        <p id="random">My Guess:</p>
+                     </div>
+                     <p id="guessMsg"></p>
+                </form>
+
                 <!--form-->
                 <form id="contact">
                     <label for="firstname">First Name<span class="required">*</span></label>

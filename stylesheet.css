@@ -126,6 +126,10 @@ table {
 	width: auto;
 	height: auto;
 }
+/* light and dark mode */
+#lightdarkmode {
+
+}
 /* body- global */
 body {
     width: 1280px;
@@ -295,6 +299,22 @@ textarea:focus {
 input:error,
 textarea:error {
 	border-color: #f0071f;
+}
+/*guessing game */
+#yourguess, #random{
+  display: inline-block;
+	font-size: 1.5rem;
+  height: 2em;
+  width: fit-content;
+	padding-left: 32%;
+	text-align: center;
+	color: var(--dark-gray);
+}
+
+#guessMsg{
+	text-align: center;
+  margin: 0.25em auto;
+  height: 1.5em;
 }
 /* ----- FOOTER STYLES ----- */
 footer{
