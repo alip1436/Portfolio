@@ -62,6 +62,65 @@ function guessingGame(event) {
 // Add event listener for the game button
 document.getElementById("gamePlay").addEventListener("click", guessingGame);
 
+//product display
+document.addEventListener("DOMContentLoaded", () => {
+    const products = document.querySelectorAll("figure#carousel");
+    const productButtons = document.querySelectorAll(".product-btn");
+
+    let currentProductIndex = 0;
+    let currentSlideIndices = Array.from(products).map(() => 0);
+
+    // Function to update displayed products
+    function updateProductDisplay() {
+        products.forEach((product, index) => {
+            product.style.display = index === currentProductIndex ? "block" : "none";
+        });
+    }
+
+    // Function to update displayed slide within a product
+    function updateSlideDisplay(productIndex) {
+        const slides = products[productIndex].querySelectorAll(".carousel-slide");
+        slides.forEach((slide, index) => {
+            slide.style.display = index === currentSlideIndices[productIndex] ? "block" : "none";
+        });
+    }
+
+    // Add event listeners for product buttons
+    productButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            currentProductIndex = index;
+            updateProductDisplay();
+        });
+    });
+
+    // Add event listeners for navigation buttons within each product
+    products.forEach((product, productIndex) => {
+        const prevBtn = product.querySelector("#prev-btn");
+        const nextBtn = product.querySelector("#next-btn");
+        const slides = product.querySelectorAll(".carousel-slide");
+
+        // Initial setup for slides
+        updateSlideDisplay(productIndex);
+
+        prevBtn.addEventListener("click", () => {
+            currentSlideIndices[productIndex] = 
+                (currentSlideIndices[productIndex] - 1 + slides.length) % slides.length;
+            updateSlideDisplay(productIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentSlideIndices[productIndex] = 
+                (currentSlideIndices[productIndex] + 1) % slides.length;
+            updateSlideDisplay(productIndex);
+        });
+    });
+
+    // Initialize display
+    updateProductDisplay();
+});
+
+
+
 //form validation
 document.getElementById("contact").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission

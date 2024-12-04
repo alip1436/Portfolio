@@ -366,6 +366,76 @@ textarea:error {
   text-align: center;
   width: fit-content;
 }
+/* about section */
+
+/* -----product display------*/
+#carousel {
+  display: flex;
+  position: relative;
+  width: 80%;
+  background-color: var(--turquoise);
+  margin: 0 auto;
+  padding: 25px;
+  overflow: hidden;
+}
+
+#carousel-track-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures only the visible slide is shown */
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed for your layout */
+  height: auto;
+}
+
+#carousel-track img,
+#carousel-track video {
+  max-width: 100%;
+  max-height:100%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures content is not cropped or skewed */
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-slide {
+  display: none; /* All slides hidden by default */
+  width: 100%; /* Matches the track container's width */
+}
+
+.carousel-slide.active {
+  display: block; /* Show only the active slide */
+}
+
+
+#carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prev-btn {
+  left: 10px;
+}
+
+#next-btn {
+  right: 10px;
+}
+
+#carousel-caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
 
 /*----- GUESSING GAME ----- */
 #yourguess, #random{
