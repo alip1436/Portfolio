@@ -64,8 +64,8 @@ document.getElementById("gamePlay").addEventListener("click", guessingGame);
 
 //product display
 document.addEventListener("DOMContentLoaded", () => {
-    const products = document.querySelectorAll("figure#carousel");
-    const productButtons = document.querySelectorAll(".product-btn");
+    let products = document.querySelectorAll("figure.carousel");
+    let productButtons = document.querySelectorAll(".product-btn");
 
     let currentProductIndex = 0;
     let currentSlideIndices = Array.from(products).map(() => 0);
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to update displayed slide within a product
     function updateSlideDisplay(productIndex) {
-        const slides = products[productIndex].querySelectorAll(".carousel-slide");
+        let slides = products[productIndex].querySelectorAll(".carousel-slide");
         slides.forEach((slide, index) => {
             slide.style.display = index === currentSlideIndices[productIndex] ? "block" : "none";
         });
@@ -95,9 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add event listeners for navigation buttons within each product
     products.forEach((product, productIndex) => {
-        const prevBtn = product.querySelector("#prev-btn");
-        const nextBtn = product.querySelector("#next-btn");
-        const slides = product.querySelectorAll(".carousel-slide");
+        let prevBtn = product.querySelector(".prev-btn");
+        let nextBtn = product.querySelector(".next-btn");
+        let slides = product.querySelectorAll(".carousel-slide");
 
         // Initial setup for slides
         updateSlideDisplay(productIndex);

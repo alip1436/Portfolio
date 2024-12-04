@@ -235,8 +235,6 @@ h2 {
     color: var(--darkgrey);
 }
 h3, p, li, label {
-    
-    font-optical-sizing: auto;
     font-style: normal; 
     font-size: 1rem;
     margin: 1rem 0;
@@ -345,10 +343,6 @@ textarea:focus {
 	border-radius: 4px;
 }
 
-input:error,
-textarea:error {
-	border-color: #f0071f;
-}
 .message {
   color: red;
   font-size: 0.9em;
@@ -369,7 +363,7 @@ textarea:error {
 /* about section */
 
 /* -----product display------*/
-#carousel {
+.carousel {
   display: flex;
   position: relative;
   width: 80%;
@@ -379,7 +373,7 @@ textarea:error {
   overflow: hidden;
 }
 
-#carousel-track-container {
+.carousel-track-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,8 +384,8 @@ textarea:error {
   height: auto;
 }
 
-#carousel-track img,
-#carousel-track video {
+.carousel-track img,
+.carousel-track video {
   max-width: 100%;
   max-height:100%; /* Maintain aspect ratio */
   object-fit: contain; /* Ensures content is not cropped or skewed */
@@ -409,7 +403,7 @@ textarea:error {
 }
 
 
-#carousel button {
+.carousel button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -422,15 +416,15 @@ textarea:error {
   z-index: 10;
 }
 
-#prev-btn {
+.prev-btn {
   left: 10px;
 }
 
-#next-btn {
+.next-btn {
   right: 10px;
 }
 
-#carousel-caption {
+.carousel-caption {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #555;
