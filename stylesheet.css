@@ -56,64 +56,7 @@ table {
 
 
 }
-/* font 
-.rubik-dirt-regular {
-.ubuntu-light {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
 
-.ubuntu-regular {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.ubuntu-medium {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.ubuntu-bold {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.ubuntu-light-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.ubuntu-regular-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.ubuntu-medium-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.ubuntu-bold-italic {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-  .limelight-regular {
-  font-family: "Limelight", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-
-*/
 /* skip link styles */
 #skip{
 	position: absolute;
@@ -164,11 +107,11 @@ body.dark-mode nav a {
 }
 
 body.dark-mode header{
-  background-color: rgba(254, 253, 253, 0.447); /* Semi-transparent overlay */
+  background-color: rgba(254, 253, 253, 0.447); 
   background-blend-mode: overlay;
 }
 body.dark-mode main {
-  background-color: rgba(254, 253, 253, 0.464); /* Semi-transparent overlay */
+  background-color: rgba(254, 253, 253, 0.464); 
   background-blend-mode: overlay;
 }
 body.dark-mode footer svg{
@@ -199,7 +142,7 @@ header{
     grid-template-columns: auto 1fr;
 	  padding: 1rem;
 	  border-bottom: 0.25rem solid var(--dkbrown);
-    background-color: rgba(9, 9, 9, 0.447); /* Semi-transparent overlay */
+    background-color: rgba(9, 9, 9, 0.447);
     background-blend-mode: overlay;
     background-image: url("images/background2.jpeg");
     background-size: cover;
@@ -316,49 +259,49 @@ main {
 }
 /*-----final project section */
 #finalproject {
-  display: flex; /* Enables flexbox for layout */
-  justify-content: flex-end; /* Aligns the content to the right */
-  align-items: center; /* Centers content vertically */
-  width: 100%; /* Full width of the parent */
-  height: 100vh; /* Full viewport height */
-  padding: 0; /* Removes unnecessary padding */
-  margin: 0; /* Removes unnecessary margin */
+  display: flex; 
+  padding: 0; 
+  margin: 0; 
   
-  box-sizing: border-box; /* Ensures padding and border are included in width/height */
 }
 
 .text-withbackground {
-  position: relative; /* Allows stacking of text over the image */
-  background-image: url('images/square.png'); /* Replace with your actual image path */
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the image within the container */
-  background-repeat: no-repeat; /* Prevents tiling */
-  width: 50%; /* Adjusts the width of the background container */
-  height: auto; /* Automatically adjusts height based on content */
-  min-height: 300px; /* Sets a minimum height for the container */
-  padding: 2rem; /* Adds space inside the container */
-  /* color: white;  */
-  text-align: left; /* Aligns text to the left */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better contrast */
-  border-radius: 8px; /* Optional: Adds rounded corners */
+  position: relative;
+  background-image: url('images/square.png'); 
+  filter: drop-shadow(2.3px 4px 4.6px hsl(0deg 0% 0% / 0.43));
+  background-size: cover; 
+  color: var(--darkgrey);
+  background-repeat: no-repeat; 
+  background-position: 25%, 25%;
+  padding: 100px; 
+  text-align: left; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  
 }
 
 .text-withbackground h3 {
   margin-bottom: 1rem;
   font-size: 2rem;
+  padding-left: 75px;
 }
 
 .text-withbackground p,
 .text-withbackground ol {
   margin: 0.5rem 0;
+  font-size: 1.2rem;
+  padding-left: 75px;
+  font-weight: 600;
 }
 
 .text-withbackground ol {
   list-style: decimal inside;
-  padding: 0;
+  
 }
 
 /* -----product display------*/
+.product-name {
+  line-height: 1.7;
+}
 .carousel {
   display: flex;
   position: relative;
@@ -373,29 +316,29 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Ensures only the visible slide is shown */
+  overflow: hidden; 
   position: relative;
   width: 100%;
-  max-width: 800px; /* Adjust as needed for your layout */
+  max-width: 800px; 
   height: auto;
 }
 
 .carousel-track img,
 .carousel-track video {
   max-width: 100%;
-  max-height:100%; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensures content is not cropped or skewed */
+  max-height:100%; 
+  object-fit: contain; 
   display: block;
   margin: 0 auto;
 }
 
 .carousel-slide {
-  display: none; /* All slides hidden by default */
-  width: 100%; /* Matches the track container's width */
+  display: none; 
+  width: 100%; 
 }
 
 .carousel-slide.active {
-  display: block; /* Show only the active slide */
+  display: block; 
 }
 
 
@@ -403,7 +346,7 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--darkgrey);
   color: white;
   border: none;
   font-size: 1.5rem;
@@ -425,6 +368,16 @@ main {
   font-size: 0.9rem;
   color: #555;
   text-align: center;
+}
+#product-controls{
+  padding-top: 10px;
+}
+.product-btn {
+  color: var(--white);
+  background-color: var(--turquoise);
+  filter: drop-shadow(2.3px 4px 4.6px hsl(0deg 0% 0% / 0.43));
+  transform: translateX(100px);
+  padding: 10px;
 }
 
 /*----- GUESSING GAME ----- */
@@ -515,7 +468,7 @@ textarea:focus {
   color: red;
   font-size: 0.9em;
   margin-top: 5px;
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
 #successfulSubmit {
@@ -565,6 +518,7 @@ footer a{
 nav a:hover, body.dark-mode nav a:hover{
     color: white;
     text-shadow: 0 2px var(--turquoise);
+    
 
 }
 

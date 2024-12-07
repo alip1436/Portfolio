@@ -1,9 +1,5 @@
 
 "use strict";
-
-
-//--- prevent default on forms 
-// attach the events handlers
 //light and dark mode
 document.getElementById("themeToggle").addEventListener("click", function () {
     // Toggle the dark mode class on the body
@@ -123,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //form validation
 document.getElementById("contact").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     // Collect inputs
     const firstname = document.getElementById("firstname").value.trim();
@@ -134,8 +130,8 @@ document.getElementById("contact").addEventListener("submit", function (event) {
     const preferredContact = document.querySelector('input[name="radio"]:checked');
 
     // Regex for validation
-    const phoneRegex = /^[0-9]{10}$/; // Simple regex for a 10-digit phone number
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex for valid email format
+    const phoneRegex = /^[0-9]{10}$/; 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
     // Error tracking
     let isValid = true;
