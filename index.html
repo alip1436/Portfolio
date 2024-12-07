@@ -52,12 +52,15 @@
                 <section id="about">
                     <p>Aspiring Full Stack Web Developer with a strong foundation in HTML, CSS, and JavaScript currently pursuing a BS in Full Stack Web Development at ASU. With 5+ years of experience in graphic design, I bring a unique blend of creativity and technical skills to web development. Known for a "figure-it-out" mentality, I am excited to apply my knowledge and enthusiasm to build user-centric and visually engaging web applications.
                     </p>
-                    <h3>Education:</h3>
-                    <ol>
-                        <li>BS Full Stack Web Development: Arizona State University, December 2025</li>
-                        <li>AAS with a major in Visual Arts & Design/Animation : Salt Lake Community College, 2004</li>
-                        <li>AAS Polysomnography: Lenoir Community College, 2021</li>
-                    </ol>
+                    <div id="education"> 
+                        <h3>Education:</h3>
+                        <ol>
+                            <li>BS Full Stack Web Development: Arizona State University, December 2025</li>
+                            <li>AAS with a major in Visual Arts & Design/Animation : Salt Lake Community College, 2004</li>
+                            <li>AAS Polysomnography: Lenoir Community College, 2021</li>
+                        </ol>
+                    </div>
+                    
                 </section>
                 <aside id="finalproject">
                     <div class="container">
@@ -197,57 +200,61 @@
                     </div>
                 </section>
                 <!-- Guessing Game -->
-                <form id="game">
-                    <h2>Play & Win!</h2>
-                    <p>Guess the number correctly, and you win!</p>
-                    <label for="yourguessIn">Enter a number between 1 and 10:</label>
-                    <input type="number" id="yourguessIn" min="1" max="10">
-                    <button id="gamePlay" type="button">Take a Guess!</button> <!-- Type button prevents form submission -->
+                 <div id="formdesign">
+                    <form id="game">
+                        <h2>Play & Win!</h2>
+                        <p>Guess the number correctly, and you win!</p>
+                        <label for="yourguessIn">Enter a number between 1 and 10:</label>
+                        <input type="number" id="yourguessIn" min="1" max="10">
+                        <button id="gamePlay" type="button">Take a Guess!</button> <!-- Type button prevents form submission -->
+        
+                        <div>
+                            <p id="yourguess">Your Guess:</p>
+                            <p id="random">My Guess:</p>
+                         </div>
+                         <p id="guessMsg"></p>
+                    </form>
     
-                    <div>
-                        <p id="yourguess">Your Guess:</p>
-                        <p id="random">My Guess:</p>
-                     </div>
-                     <p id="guessMsg"></p>
-                </form>
-
-                <!--CONTACT form-->
-                <form id="contact" action="contact-form.php" method="post">
-                    <label for="firstname">First Name<span class="required">*</span></label>
-                    <input type="text" name="firstname" id="firstname" required>
-                    <span class="message" id="error-firstname"></span>
+                    <!--CONTACT form-->
+                    <form id="contact" action="contact-form.php" method="post">
+                        <h2>Contact Me</h2>
+                        <label for="firstname">First Name<span class="required">*</span></label>
+                        <input type="text" name="firstname" id="firstname" required>
+                        <span class="message" id="error-firstname"></span>
+                    
+                        <label for="lastname">Last Name<span class="required">*</span></label>
+                        <input type="text" name="lastname" id="lastname" required>
+                        <span class="message" id="error-lastname"></span>
+                    
+                        <label for="tel">Phone Number<span class="required">*</span></label>
+                        <input type="tel" name="tel" id="tel" autocomplete="tel">
+                        <span class="message" id="error-tel"></span>
+                    
+                        <label for="email">Email<span class="required">*</span></label>
+                        <input type="email" name="email" id="email" autocomplete="email">
+                        <span class="message" id="error-email"></span>
+                    
+                        <label for="comments">Comments<span class="required">*</span></label>
+                        <textarea name="comments" id="comments" required></textarea>
+                        <span class="message" id="error-comments"></span>
+                    
+                        <fieldset>
+                            <legend>Preferred Method of Contact<span class="required">*</span></legend>
+                            <input id="radio" name="radio" type="radio" value="phone" required>
+                            <label for="radio">Phone</label>
+                            <input id="radio2" name="radio" type="radio" value="email">
+                            <label for="radio2">Email</label>
+                            <span class="message" id="error-radio"></span>
+                        </fieldset>
+                        <input type="submit" value="Submit">
+                    </form>
+                    <section id="successfulSubmit" style="display: none;">
+                        <h4>Thank You!</h4>
+                        <p>Your form has been submitted successfully! I will be in touch shortly.</p>
+                        <p id="formSub"></p>
+                    </section>
+                 </div>
                 
-                    <label for="lastname">Last Name<span class="required">*</span></label>
-                    <input type="text" name="lastname" id="lastname" required>
-                    <span class="message" id="error-lastname"></span>
-                
-                    <label for="tel">Phone Number<span class="required">*</span></label>
-                    <input type="tel" name="tel" id="tel" autocomplete="tel">
-                    <span class="message" id="error-tel"></span>
-                
-                    <label for="email">Email<span class="required">*</span></label>
-                    <input type="email" name="email" id="email" autocomplete="email">
-                    <span class="message" id="error-email"></span>
-                
-                    <label for="comments">Comments<span class="required">*</span></label>
-                    <textarea name="comments" id="comments" required></textarea>
-                    <span class="message" id="error-comments"></span>
-                
-                    <fieldset>
-                        <legend>Preferred Method of Contact<span class="required">*</span></legend>
-                        <input id="radio" name="radio" type="radio" value="phone" required>
-                        <label for="radio">Phone</label>
-                        <input id="radio2" name="radio" type="radio" value="email">
-                        <label for="radio2">Email</label>
-                        <span class="message" id="error-radio"></span>
-                    </fieldset>
-                    <input type="submit" value="Submit">
-                </form>
-                <section id="successfulSubmit" style="display: none;">
-                    <h4>Thank You!</h4>
-                    <p>Your form has been submitted successfully! I will be in touch shortly.</p>
-                    <p id="formSub"></p>
-                </section>
                 
             </main>
             <footer>

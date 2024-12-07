@@ -285,7 +285,8 @@ main {
   padding-top: 10px;
   padding-left: 25px;
 }
-/* website description */
+
+/* about section */
 #about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -294,10 +295,8 @@ main {
   margin: 10px;
   align-items: center;
   column-gap: 15px;
-  /* background-image: url("images/barframe.png");
-  background-repeat: no-repeat;
-  background-size: 100%, 100%, contain; */
   filter: drop-shadow(2.3px 4px 4.6px hsl(0deg 0% 0% / 0.43));
+  background-color: var(--turquoise);
   
 }
 #about p {
@@ -309,6 +308,11 @@ main {
 #about ol{
   grid-row: 2;
   grid-column: 2;
+}
+#education h3{
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 /*-----final project section */
 #finalproject {
@@ -353,94 +357,6 @@ main {
   list-style: decimal inside;
   padding: 0;
 }
-
-
-
-/* form */
-form {
-	display: block;
-	width: 300px;
-	padding: 1em;
-	margin: 0 auto;
-	color: #222;
-	font-size: 1.1em;
-}
-input,
-label,
-fieldset {
-	display: block;
-	width: 95%;
-}
-
-.required {
-	color: red;
-	font-size: 1.1em;
-	font-weight: bold;
-}
-
-label {
-	padding-left: 0.5em;
-	margin: 0.75em 0 0.25em 0;
-}
-
-input {
-	font-size: 1em;
-	padding: 0.25em 0.5em;
-	border: 1px solid #222;
-	height: 1.5em;
-}
-
-fieldset {
-	border: 1px solid #222;
-	padding: 0.5em 0 1em 0.5em;
-	margin: 0.75em 0 0.25em 0;
-	width: 98%;
-	display: grid;
-	grid-template-columns: 1fr 3fr 1fr 3fr;
-}
-
-input[type="submit"] {
-	padding: 0.75em;
-	width: 35%;
-	height: auto;
-	margin-left: 67%;
-	color: #fff;
-	background-color: #222;
-	border: none;
-	font-family: serif;
-}
-
-textarea {
-	width: 100%;
-	height: 5em;
-	margin-bottom: 1em;
-}
-
-input:focus,
-textarea:focus {
-	border-color: var(--turquoise);
-	box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.3);
-	border-radius: 4px;
-}
-
-.message {
-  color: red;
-  font-size: 0.9em;
-  margin-top: 5px;
-  display: none; /* Hidden by default */
-}
-
-#successfulSubmit {
-  background-color: #f9faf9;
-  color: var(--darkgrey);
-  padding: 10px;
-  border: 1px solid var(--turquoise);
-  margin-top: 20px;
-  margin-left: 350px;
-  text-align: center;
-  width: fit-content;
-}
-/* about section */
 
 /* -----product display------*/
 .carousel {
@@ -527,9 +443,104 @@ textarea:focus {
   margin: 0.25em auto;
   height: 1.5em;
 }
+/* form */
+form {
+	display: block;
+	width: 300px;
+	padding: 10px;
+	margin: 0 50px;
+	color: var(--darkgrey);
+	font-size: 1.1em;
+
+}
+input,
+label,
+fieldset {
+	display: block;
+	width: 95%;
+}
+
+.required {
+	color: red;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+label {
+	padding-left: 0.5em;
+	margin: 0.75em 0 0.25em 0;
+}
+
+input {
+	font-size: 1em;
+	padding: 0.25em 0.5em;
+	border: 1px solid #222;
+	height: 1.5em;
+}
+
+fieldset {
+	border: 1px solid #222;
+	padding: 0.5em 0 1em 0.5em;
+	margin: 0.75em 0 0.25em 0;
+	width: 98%;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr 3fr;
+}
+
+input[type="submit"] {
+	padding: 0.75em;
+	width: 35%;
+	height: auto;
+	margin-left: 67%;
+	color: #fff;
+	background-color: #222;
+	border: none;
+	font-family: serif;
+}
+
+textarea {
+	width: 100%;
+	height: 5em;
+	margin-bottom: 1em;
+}
+
+input:focus,
+textarea:focus {
+	border-color: var(--turquoise);
+	box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.3);
+	border-radius: 4px;
+}
+
+.message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none; /* Hidden by default */
+}
+
+#successfulSubmit {
+  background-color: #f9faf9;
+  color: var(--darkgrey);
+  padding: 10px;
+  border: 1px solid var(--turquoise);
+  margin-top: 20px;
+  margin-left: 350px;
+  text-align: center;
+  width: fit-content;
+}
+ /*-----form design------*/
+#formdesign {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--turquoise);
+  margin: 10px;
+  padding:10px;
+  
+  
+}
 /* ----- FOOTER STYLES ----- */
 footer{
-	padding: 1rem; 	
+	padding: 10px; 	
 	border-top: 0.25rem solid var(--turquoise);
   display: flex;
   flex-direction: column;
